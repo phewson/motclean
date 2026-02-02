@@ -5,8 +5,8 @@
 #' non-alphanumeric characters, collapses repeated whitespace, and trims
 #' leading/trailing spaces.
 #'
-#' This function does **not** attempt to correct spelling, infer makes or models,
-#' or change semantic content. It exists solely to make text comparable.
+#' This function does **not** attempt to correct spelling, infer makes or
+#' models, or change semantic content. It exists solely to make text comparable.
 #'
 #' @param x A character vector of vehicle makes or descriptions.
 #'
@@ -19,9 +19,8 @@
 #'
 #' @export
 standardise_text <- function(x) {
-  x %>%
-    toupper() %>%
-    gsub("[^A-Z0-9 ]", " ", x = .) %>%
-    gsub("\\s+", " ", x = .) %>%
-    trimws()
+  x <- toupper(x)
+  x <- sub("[^A-Z0-9 ]", " ", x)
+  x <- gsub("\\s+", " ", x)
+  trimws(x)
 }

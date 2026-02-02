@@ -20,8 +20,10 @@
 #' @return A character string representing a candidate make prefix.
 #'
 #' @examples
+#' \dontrun
 #' extract_make_candidate("ALFA ROMEO GIULIETTA 1.4")
 #' extract_make_candidate("ABARTH 1000SP L/H/D")
+#' }
 #'
 #' @keywords internal
 extract_make_candidate <- function(x) {
@@ -30,5 +32,5 @@ extract_make_candidate <- function(x) {
   x <- sub("\\s*[0-9].*$", "", x)
   # keep at most first 3 tokens
   tokens <- strsplit(x, " ")[[1]]
-  paste(tokens[1:min(3, length(tokens))], collapse = " ")
+  paste(tokens[seq_len(min(3, length(tokens)))], collapse = " ")
 }

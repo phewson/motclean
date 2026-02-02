@@ -1,16 +1,20 @@
 Package: motclean
 Title: Clean UK MOT make and model data
 Version: 0.0.0.9000
-Authors@R: Paul Hewson p.hewson2@exeter.ac.uk aut
-Description: Takes raw UK MOT data and cleans the Make and Model columns against a dictionary of "known" car makes and models. These latter use reference data derived from UK vehicle licensing statistics published by the DVLA under the Open Government Licence.
-License: GPL
-Encoding: UTF-8
+Authors@R: 
+    person("Paul", "Hewson", , "p.hewson2@exeter.ac.uk", role = c("aut", "cre"))
+Description: Takes raw UK MOT data and cleans the Make and Model columns
+    against a dictionary of "known" car makes and models. These latter use
+    reference data derived from UK vehicle licensing statistics published
+    by the DVLA under the Open Government Licence.
+License:GPL (>= 3)
+Depends: 
+    R (>= 3.5)
 Imports:
     stringdist
 Suggests:
     testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Depends: 
-    R (>= 3.5)
-Config/testthat/edition: 3

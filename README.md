@@ -1,6 +1,9 @@
 motclean
 =========
 
+![example workflow](https://github.com/phewson/motclean/actions/workflows/R-CMD-check.yml/badge.svg)
+
+
 `motclean` provides tools for identifying and standardising vehicle makes and models from messy free-text sources such as MOT records.
 
 The package is designed for high-volume, low-quality data, where perfect recall is impossible and explicit uncertainty handling is required.

@@ -5,7 +5,7 @@ test_that("known misspellings are matched to canonical makes", {
   )
 
   expect_equal(
-    match_make("ALFA RAMAO")[["make_clean"]],
+    match_make("ALFA RAMEA")[["make_clean"]],
     "ALFA ROMEO"
   )
 
@@ -80,4 +80,3 @@ test_that("can't match if numbers come before names (TECH DEBT)", {
     "OTHER"
   )
 })
-
